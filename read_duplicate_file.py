@@ -17,6 +17,8 @@ def main():
     cur_files = []
     for line in fileinput.input():
         sha, filename = line.split(None, 1)
+        sha = sha.strip()
+        filename = filename.strip()
         if sha == cur_sha:
             cur_files.append(filename)
         else:
