@@ -5,7 +5,7 @@ import subprocess
 import time
 
 def process_duplicates(filenames):
-    if len(filenames) == 0:
+    if len(filenames) < 2:
         return
 
     command = ["bedup", "dedup-files"]
