@@ -10,6 +10,7 @@ def process_duplicates(filenames):
 
     command = ["bedup", "dedup-files"]
     command.extend(filenames)
+    print(" ".join(command))
     subprocess.call(command)
 
 def main():
@@ -23,7 +24,7 @@ def main():
             cur_files.append(filename)
         else:
             process_duplicates(cur_files)
-            time.sleep(10)
+            # time.sleep(10)
             cur_sha = sha
             cur_files = []
 
